@@ -1,6 +1,8 @@
 **/**/.env
 .DS_Store
 /.idea
+.claude/
+.codex/
 **/**/node_modules/
 .cache
 
