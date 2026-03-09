@@ -8,3 +8,5 @@ npx nx start twenty-front --yes
 npm run start:front
 
 
+git commit --no-verify --no-gpg-sign -m "Initial commit - Twenty CRM"
+

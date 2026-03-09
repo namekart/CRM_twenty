@@ -3,6 +3,8 @@
 /.idea
 .claude/
 .codex/
+README
+README.*
 **/**/node_modules/
 .cache
 
