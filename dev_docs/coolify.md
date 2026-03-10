@@ -121,6 +121,29 @@ In Coolify’s **Environment Variables** section for this resource, add the foll
 
 ---
 
+## Optional: auto-redeploy after GitHub image build
+
+This repo includes two workflows:
+
+- `.github/workflows/build-and-push-ghcr.yml`  
+  Builds and pushes your image to GHCR on every push to `main`.
+- `.github/workflows/redeploy-coolify.yml`  
+  Triggers a Coolify deployment hook after the GHCR build workflow succeeds.
+
+### Setup required
+
+1. In Coolify, open your application and copy the **Deploy Hook URL**.
+2. In GitHub, go to **Settings → Secrets and variables → Actions → Secrets**.
+3. Add secret:
+   - `COOLIFY_DEPLOY_HOOK_URL` = your Coolify deploy hook URL
+4. Ensure GitHub variable is set:
+   - `SERVER_URL` (used during image build)
+
+After this, pushing to `main` should:
+1) build/push image to GHCR, then 2) trigger redeploy in Coolify automatically.
+
+---
+
 ## Troubleshooting
 
 ### Build fails

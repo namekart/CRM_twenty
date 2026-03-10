@@ -1,0 +1,44 @@
+name: Redeploy Coolify
+
+on:
+  workflow_run:
+    workflows:
+      - Build And Push GHCR
+    types:
+      - completed
+
+permissions:
+  contents: read
+
+jobs:
+  redeploy:
+    if: >
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_branch == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Trigger Coolify deploy hook (POST)
+        env:
+          COOLIFY_DEPLOY_HOOK_URL: ${{ secrets.COOLIFY_DEPLOY_HOOK_URL }}
+        shell: bash
+        run: |
+          if [ -z "${COOLIFY_DEPLOY_HOOK_URL}" ]; then
+            echo "Missing secret COOLIFY_DEPLOY_HOOK_URL"
+            exit 1
+          fi
+
+          echo "Triggering Coolify deploy hook via POST..."
+          curl --fail --silent --show-error \
+            --request POST \
+            "${COOLIFY_DEPLOY_HOOK_URL}"
+
+      - name: Fallback trigger with GET (optional compatibility)
+        if: failure()
+        env:
+          COOLIFY_DEPLOY_HOOK_URL: ${{ secrets.COOLIFY_DEPLOY_HOOK_URL }}
+        shell: bash
+        run: |
+          echo "POST failed, trying GET fallback..."
+          curl --fail --silent --show-error \
+            "${COOLIFY_DEPLOY_HOOK_URL}"
