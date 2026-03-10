@@ -28,7 +28,7 @@ COPY ./packages/twenty-emails /app/packages/twenty-emails
 COPY ./packages/twenty-shared /app/packages/twenty-shared
 COPY ./packages/twenty-server /app/packages/twenty-server
 
-RUN npx nx run twenty-server:build
+RUN NX_DAEMON=false NODE_OPTIONS=--max-old-space-size=6144 npx nx run twenty-server:build --verbose
 
 RUN yarn workspaces focus --production twenty-emails twenty-shared twenty-server
 
