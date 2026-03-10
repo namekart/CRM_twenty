@@ -57,3 +57,4 @@ TRANSLATION_QA_REPORT.md
 .playwright-mcp/
 
 .nx/polygraph
+.dev_docs

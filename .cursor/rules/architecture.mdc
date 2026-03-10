@@ -12,10 +12,10 @@ alwaysApply: true
 - **Monorepo**: Nx workspace with yarn
 
 ## Package Structure
-```
+```j
 packages/
 ├── twenty-front/     # React app
-├── twenty-server/    # NestJS API  
+├── twenty-server/    # NestJS API
 ├── twenty-ui/        # Shared components
 ├── twenty-shared/    # Common types/utils
 └── twenty-emails/    # Email templates
