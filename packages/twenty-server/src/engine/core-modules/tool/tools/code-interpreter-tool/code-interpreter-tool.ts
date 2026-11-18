@@ -287,11 +287,15 @@ export class CodeInterpreterTool implements Tool {
           timeout: 30_000,
         });
 
+        const responseContentType = response.headers['content-type'];
+
         inputFiles.push({
           filename: file.filename,
           content: Buffer.from(response.data),
           mimeType:
-            response.headers['content-type'] ?? 'application/octet-stream',
+            typeof responseContentType === 'string'
+              ? responseContentType
+              : 'application/octet-stream',
         });
       } catch (error) {
         this.logger.warn(`Failed to download file ${file.filename}`, error);
