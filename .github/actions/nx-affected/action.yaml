@@ -19,4 +19,10 @@ runs:
       uses: nrwl/nx-set-shas@v4
     - name: Run affected command
       shell: bash
-      run: npx nx affected --nxBail --configuration=${{ inputs.configuration }} -t=${{ inputs.tasks }} --parallel=${{ inputs.parallel }} --exclude='*,!tag:${{ inputs.tag }}' ${{ inputs.args }}
+      env:
+        CONFIGURATION: ${{ inputs.configuration }}
+        TASKS: ${{ inputs.tasks }}
+        PARALLEL: ${{ inputs.parallel }}
+        TAG: ${{ inputs.tag }}
+        ARGS: ${{ inputs.args }}
+      run: npx nx affected --nxBail --configuration=$CONFIGURATION -t=$TASKS --parallel=$PARALLEL --exclude="*,!tag:$TAG" $ARGS
