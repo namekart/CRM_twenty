@@ -25,4 +25,4 @@ runs:
         PARALLEL: ${{ inputs.parallel }}
         TAG: ${{ inputs.tag }}
         ARGS: ${{ inputs.args }}
-      run: npx nx affected --nxBail --configuration=$CONFIGURATION -t=$TASKS --parallel=$PARALLEL --exclude='*,!tag:$TAG' $ARGS
+      run: npx nx affected --nxBail --configuration=$CONFIGURATION -t=$TASKS --parallel=$PARALLEL --exclude="*,!tag:$TAG" $ARGS
