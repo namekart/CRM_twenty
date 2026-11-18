@@ -11636,17 +11636,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nestjs/devtools-integration@npm:^0.2.1":
-  version: 0.2.1
-  resolution: "@nestjs/devtools-integration@npm:0.2.1"
+"@nestjs/devtools-integration@npm:^12.0.0":
+  version: 12.0.0
+  resolution: "@nestjs/devtools-integration@npm:12.0.0"
   dependencies:
-    "@nyariv/sandboxjs": "npm:0.8.25"
-    chalk: "npm:^4.1.2"
-    node-fetch: "npm:^2.6.9"
+    "@nyariv/sandboxjs": "npm:^0.9.7"
+    chalk: "npm:^5.6.2"
   peerDependencies:
-    "@nestjs/common": ^9.3.7 || ^10.0.0 || ^11.0.0
-    "@nestjs/core": ^9.3.7 || ^10.0.0 || ^11.0.0
-  checksum: 10c0/1499243eb8b34040783644bf79b3e57f43d0a8835e71de36ab05a5be8c9245dbbbed3be1160047fb821ce014e73b96d05b2d56567f552a3847c3ba2d95016ecb
+    "@nestjs/common": ^12.0.0
+    "@nestjs/core": ^12.0.0
+  checksum: 10c0/623f420f23e0b13f2f2da29716a94399aa3f7cbd6d223cf9ac45254f776e132298ee00b6ef293706ee58e0dd53196e02476d78550ef3892eb64589acec0e6011
   languageName: node
   linkType: hard
 
@@ -13153,10 +13152,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nyariv/sandboxjs@npm:0.8.25":
-  version: 0.8.25
-  resolution: "@nyariv/sandboxjs@npm:0.8.25"
-  checksum: 10c0/9d656b43035348a743dd0e3e5b92351b48f39a506b98c9070deba524cce8e547945305b5a4b868d5ede303ce012917a92f7daecd6ee5222bafb20b9d0e9dafea
+"@nyariv/sandboxjs@npm:^0.9.7":
+  version: 0.9.7
+  resolution: "@nyariv/sandboxjs@npm:0.9.7"
+  checksum: 10c0/a9c330a17ccd7eb78d3c43ee3576281dcd5e708557dcb6c0e3afdf22801c0e76726bec0622815b1d16e53dae9da05d69647e1cc81b6c2b0689eff584354270ea
   languageName: node
   linkType: hard
 
@@ -30924,7 +30923,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^5.1.0, chalk@npm:^5.6.0":
+"chalk@npm:^5.1.0, chalk@npm:^5.6.0, chalk@npm:^5.6.2":
   version: 5.6.2
   resolution: "chalk@npm:5.6.2"
   checksum: 10c0/99a4b0f0e7991796b1e7e3f52dceb9137cae2a9dfc8fc0784a550dc4c558e15ab32ed70b14b21b52beb2679b4892b41a0aa44249bcb996f01e125d58477c6976
@@ -57972,7 +57971,7 @@ __metadata:
     "@nestjs/common": "npm:11.1.9"
     "@nestjs/config": "npm:3.3.0"
     "@nestjs/core": "npm:11.1.9"
-    "@nestjs/devtools-integration": "npm:^0.2.1"
+    "@nestjs/devtools-integration": "npm:^12.0.0"
     "@nestjs/event-emitter": "npm:2.1.0"
     "@nestjs/graphql": "patch:@nestjs/graphql@12.1.1#./patches/@nestjs+graphql+12.1.1.patch"
     "@nestjs/jwt": "npm:11.0.1"
