@@ -10,9 +10,12 @@ runs:
     - name: Cache primary key builder
       id: globals
       shell: bash
+      env:
+        NODE_VERSION: ${{ inputs.node-version }}
+        YARN_LOCK_HASH: ${{ hashFiles('yarn.lock') }}
       run: |
         echo "ACTION_SHELL=bash" >> "${GITHUB_OUTPUT}"
-        echo "CACHE_KEY_PREFIX=node_modules-cache-node-${{ inputs.node-version }}-${{ hashFiles('yarn.lock') }}"  >> "${GITHUB_OUTPUT}"
+        echo "CACHE_KEY_PREFIX=node_modules-cache-node-${NODE_VERSION}-${YARN_LOCK_HASH}"  >> "${GITHUB_OUTPUT}"
         echo 'PATH_TO_CACHE<<EOF' >> $GITHUB_OUTPUT
         echo "node_modules" >> $GITHUB_OUTPUT
         echo "packages/*/node_modules" >> $GITHUB_OUTPUT
