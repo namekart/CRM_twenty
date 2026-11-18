@@ -207,7 +207,8 @@
     "@lingui/core": "5.1.2",
     "@types/qs": "6.9.16",
     "form-data@npm:4.0.0": "4.0.4",
-    "form-data@npm:~2.3.2": "2.5.4"
+    "form-data@npm:~2.3.2": "2.5.4",
+    "lodash": "4.18.1"
   },
   "version": "0.2.1",
   "nx": {},
