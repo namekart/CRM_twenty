@@ -6,6 +6,7 @@ on:
       - Build And Push GHCR
     types:
       - completed
+    branches: [main]
 
 permissions:
   contents: read
