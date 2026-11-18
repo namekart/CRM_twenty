@@ -33522,7 +33522,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:4.4.1, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.3, debug@npm:^4.3.4, debug@npm:^4.3.5, debug@npm:^4.3.6":
+"debug@npm:4, debug@npm:^4.0.0, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.3, debug@npm:^4.3.4, debug@npm:^4.3.5, debug@npm:^4.3.6":
   version: 4.4.1
   resolution: "debug@npm:4.4.1"
   dependencies:
@@ -33546,16 +33546,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:^3.2.7":
-  version: 3.2.7
-  resolution: "debug@npm:3.2.7"
-  dependencies:
-    ms: "npm:^2.1.1"
-  checksum: 10c0/37d96ae42cbc71c14844d2ae3ba55adf462ec89fd3a999459dec3833944cd999af6007ff29c780f1c61153bcaaf2c842d1e4ce1ec621e4fc4923244942e4a02a
-  languageName: node
-  linkType: hard
-
-"debug@npm:^4.4.0, debug@npm:^4.4.1, debug@npm:^4.4.3":
+"debug@npm:4.4.3, debug@npm:^4.4.0, debug@npm:^4.4.1, debug@npm:^4.4.3":
   version: 4.4.3
   resolution: "debug@npm:4.4.3"
   dependencies:
@@ -33564,6 +33555,15 @@ __metadata:
     supports-color:
       optional: true
   checksum: 10c0/d79136ec6c83ecbefd0f6a5593da6a9c91ec4d7ddc4b54c883d6e71ec9accb5f67a1a5e96d00a328196b5b5c86d365e98d8a3a70856aaf16b4e7b1985e67f5a6
+  languageName: node
+  linkType: hard
+
+"debug@npm:^3.2.7":
+  version: 3.2.7
+  resolution: "debug@npm:3.2.7"
+  dependencies:
+    ms: "npm:^2.1.1"
+  checksum: 10c0/37d96ae42cbc71c14844d2ae3ba55adf462ec89fd3a999459dec3833944cd999af6007ff29c780f1c61153bcaaf2c842d1e4ce1ec621e4fc4923244942e4a02a
   languageName: node
   linkType: hard
 
@@ -57568,14 +57568,14 @@ __metadata:
   linkType: hard
 
 "tsdav@npm:^2.1.5":
-  version: 2.1.5
-  resolution: "tsdav@npm:2.1.5"
+  version: 2.1.8
+  resolution: "tsdav@npm:2.1.8"
   dependencies:
     base-64: "npm:1.0.0"
     cross-fetch: "npm:4.1.0"
-    debug: "npm:4.4.1"
+    debug: "npm:4.4.3"
     xml-js: "npm:1.6.11"
-  checksum: 10c0/ff04bb9b61413c07d4532926f9d4a8b6788af77c6e3aa87813c797a06e59348398d2d9ecb15ef3e82e4ae013fe764c73511c3bbfaff5fb6c4484f5f15099499f
+  checksum: 10c0/bb0ff3021483ca2a1878c45aeb86cf27c0d03973dabd1dd547825e98de865b840d7a47662e277a251fabf9a39d521c13ea8a520807ce62fc3c8cd7a1a13710a2
   languageName: node
   linkType: hard
 
